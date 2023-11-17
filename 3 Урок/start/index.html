@@ -5,19 +5,19 @@
     <meta charset="UTF-8" />
     <title>Relecloud Galaxy Tours</title>
     <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="https://unpkg.com/vue@next"></script>
     <!-- TODO: Import Vue.js core library -->
 
 </head>
 
-<body>
-    <div class="nav-bar"></div>
-    <h1>Relecloud Galaxy Tours</h1>
-
-    <!-- TODO: Add information display -->
-
-    
+<body id="app">
+    <input type="text" v-model="name" />
+    <input type="checkbox" v-model="benefitsSelected" true-value="yes" false-value="no"> Benefits selected: {{ benefitsSelected }}
     <!-- TODO: Import Vue app -->
-
+    <script src="./index.js"></script>
+    <script>
+        app.mount('#app');
+    </script>
 </body>
 
 </html>
