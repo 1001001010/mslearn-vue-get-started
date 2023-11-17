@@ -31,7 +31,12 @@
             <div class="colum">
                 $ {{ productClass.price.toLocaleString('en-Us') }}
             </div>
+            <!-- More to come -->
+            <button v-if="productClass.earlyBird" class="button">Бронируйте Заранее</button>
+            <button v-else class="button">Бронируйте прямо сейчас!</button>
+            <div v-show="productClass.seatsAvailable < 10">Почти все распродано!</div>
         </div>
+
 
         <img v-bind:src="productImage" v-bind:alt="productImageDescription" :style="productImageStyle" />
     </div>
