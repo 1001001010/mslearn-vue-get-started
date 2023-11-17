@@ -20,6 +20,12 @@
         <!-- TODO: Add code to display classes -->
         <div v-for="(productClass, index) in productClasses" :key="index" class="row">
             <div class="colum">
+                <div v-if="new Date().getMonth() < 3">It is the first quarter</div>
+                <div v-else-if="new Date().getMonth() < 6">It is the second quarter</div>
+                <div v-else-if="new Date().getMonth() < 9">It is the third quarter</div>
+                <div v-else>It is the fourth quarter</div>
+            </div>
+            <div class="colum">
                 {{ productClass.name }}
             </div>
             <div class="colum">
